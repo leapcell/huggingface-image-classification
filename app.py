@@ -43,8 +43,8 @@ RESPONSE_HTML = """
 """
 
 # Load the model and processor from the local path
-model = ResNetForImageClassification.from_pretrained(MODEL_PATH)
-processor = AutoImageProcessor.from_pretrained(MODEL_PATH)
+model = ResNetForImageClassification.from_pretrained(MODEL_PATH, local_files_only=True)
+processor = AutoImageProcessor.from_pretrained(MODEL_PATH, local_files_only=True)
 
 
 @app.route("/")

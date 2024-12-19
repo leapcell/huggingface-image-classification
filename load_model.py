@@ -2,7 +2,7 @@ from transformers import AutoImageProcessor, ResNetForImageClassification
 
 MODEL_PATH = "./model"
 
-model_name = "Falconsai/nsfw_image_detection"
+model_name = "microsoft/resnet-50"
 
 model = ResNetForImageClassification.from_pretrained(model_name)
 processor = AutoImageProcessor.from_pretrained(model_name)
